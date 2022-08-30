@@ -1,10 +1,13 @@
-const tusFondos = Number(prompt("Ingrese cuantos fondos tiene"))  
-const fondosTarjetaDebito = Number(prompt("Ingrese cuantos fondos tiene en su tarjeta"))
+const numero = Number(prompt("Ingrese un numero del que quiera saber la tabla de multiplicar"))
 
-if (tusFondos >= 1000 || fondosTarjetaDebito >= 1000) {
-    console.log("Puedes comprarte un control")
-} else if (tusFondos <= 500 && tusFondos >=300 || fondosTarjetaDebito <= 500 && fondosTarjetaDebito >= 300) {
-    console.log("No puedes comprarte un control pero si te podes comprar un combo de McDonalds ")
-} else {
-    console.log ("No te compras minga")
+for (let i = 1; i<= 10; i++) {
+    let resultado = numero * i
+       if (resultado % 2 == 0) {
+           console.log (`${numero} por ${i} es igual a ${resultado}, a su vez ${resultado} es par`)
+       } else {
+        let resultado = numero * i
+        console.log (`${numero} por ${i} es igual a ${resultado}, a su vez ${resultado} es impar`)
+       }
 }
+
+
