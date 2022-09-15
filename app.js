@@ -116,8 +116,8 @@ let nombre = prompt("Para empezar ingresa tu nombre")
 alert (`Bienvenido ${nombre}, empieza a comprar ropa de la mejor calidad presionando ENTER!`)
 
 function compra() {
-    let compra = Number(prompt("Que prenda deseas comprar \n 1. Camiseta Nike \n 2. Buzo Nike \n 3. Pantalon Adidas \n 4. Campera Adidas \n 5. Jean Drew \n 6. Gorro Adidas \n 7. Short Nike \n 8. Carrito \n 9. Finalizar Compra \n 10. Salir"))
-    switch (compra) {
+    let compras = Number(prompt("Que prenda deseas comprar \n 1. Camiseta Nike \n 2. Buzo Nike \n 3. Pantalon Adidas \n 4. Campera Adidas \n 5. Jean Drew \n 6. Gorro Adidas \n 7. Short Nike \n 8. Carrito \n 9. Finalizar Compra \n 10. Salir"))
+    switch (compras) {
         case 1: 
             alert (`Has seleccionado una Camiseta Nike`)
             estasSeguro ()
@@ -167,6 +167,7 @@ function compra() {
 
         default:
             alert("Ingrese un numero entre el 1 y el 10");
+            compra()
         break;
     } 
 }
