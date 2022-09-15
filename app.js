@@ -166,8 +166,7 @@ function compra() {
         break;
 
         default:
-            alert("Ingrese un numero entre el 1 y el 10")
-            compra ();
+            alert("Ingrese un numero entre el 1 y el 10");
         break;
     } 
 }
