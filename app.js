@@ -52,13 +52,6 @@ function modificarCantidad(){
     prendaRestar.total = prendaRestar.precio * cantidadARestar
 }  
 
-function mostrarCarrito () {
-        const mostrar = carrito.map(({tipoPrenda, marca, precio}) => {
-            alert(`Tienes una ${tipoPrenda} de marca ${marca}, de precio ${precio} `)
-    });
-    alert(`${mostrar}`)
-}
-
 function estasSeguro () {
    let decision = prompt("Quieres agregar esta prenda a tu carrito o deseas ver otras opciones? \n 1. Quiero agregarlo al carrito \n 2. No, quiero comprar algo mas")
    if (decision == 1) {
@@ -98,7 +91,9 @@ function carritos() {
             break;
 
         case 5:
-            alert(`Tu carrito contiene ${mostrarCarrito()} `) 
+            let a = carrito.forEach(({tipoPrenda, marca, precio}) => {
+                alert(`Tienes una ${tipoPrenda} de marca ${marca}, de precio ${precio}`)
+            })
             carritos()
         break;
 
