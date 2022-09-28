@@ -9,7 +9,7 @@ let clothesData = [{
     id:1,
     name:"Nike Hoodie",
     price: 100,
-    img: "assets/img/NikeHoodie.jpg",
+    img: "assets/img/nikeHoodie.jpg",
     alt: "Nike Hoodie image"
 }, 
 {
