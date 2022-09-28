@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Lora&family=Montserrat:wght@500;600&family=Poppins:wght@500;600&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
     <!-- Font Awesome Icons -->
     <script
@@ -23,13 +25,13 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="index.html">
-        7 clothes</span>
+      <a class="header__logo" href="../index.html">
+        7 clothe<span class="logo__span">s</span>
       </a>
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a href="pages/cart.html" class="header__link">
+            <a href="cart.html" class="header__link">
               <i class="fa-solid fa-cart-shopping icon"></i>
             </a>
           </li>
@@ -37,11 +39,11 @@
       </nav>
     </header>
     <main>
-      <section class="section" id="store">
-        <!-- Rendered cards -->
-      </section>
+      <section class="cart__section" id="cart__section"></section>
+
+      <section class="cart__items" id="cart__items"></section>
     </main>
-    <script src="src/products.js"></script>
-    <script src="src/app.js"></script>
+    <script src="../src/products.js"></script>
+    <script src="../src/cart.js"></script>
   </body>
 </html>
