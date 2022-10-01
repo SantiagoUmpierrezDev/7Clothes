@@ -27,17 +27,6 @@ let store = document.getElementById("store");
     
     generateCards();
 
-const add = document.querySelectorAll(".article__button")
-
-add.forEach(element => {
-    element.addEventListener('click', function() {
-        const clickedItem = (element.parentElement).parentElement;
-        const clickedItemId = clickedItem.id.charAt(6);
-        cart.push(clothesData[clickedItemId])
-        generateCardsinCart()
-    });
-});
-
 let addToCart = (id) => {
     let selectedItem = id;
     let search = cart.find((i) => i.id === selectedItem);

@@ -73,6 +73,8 @@ let decrement = (id) => {
 
     cart = cart.filter ((i) => i.amount !== 0);
 
+    generateCardsinCart();
+
     localStorage.setItem("cart", JSON.stringify(cart));
 
 }
