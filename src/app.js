@@ -17,7 +17,7 @@ let store = document.getElementById("store");
                     <p class="price__paragraph">$ ${price}</p>
                 </div>
                 <div class="store__div">
-                    <button class="cart__add" onClick="addToCart(${id})">Add to cart</button>
+                    <button id="addToCartBtn" class="cart__add" onClick="addToCart(${id})">Add to cart</button>
                 </div>
             </div>
             </article>`

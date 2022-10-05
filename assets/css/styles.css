@@ -271,14 +271,13 @@ html {
 /* SWEET ALERT */
 
 .swal-size {
-    font-family: var(--logoFont);
-    font-size: 1.3rem;
+    font-family: var(--logoFont) !important;
+    font-size: 1.3rem !important;
     width: 39rem;
     height: 25rem;
 }
 
 .swal-after {
-    font-family: var(--logoFont);
-    font-size: 1.2rem;
-
+    font-family: var(--logoFont) !important;
+    font-size: 1.2rem !important;
 }

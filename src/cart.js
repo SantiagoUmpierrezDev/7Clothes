@@ -93,14 +93,6 @@ function removeItemFromCart(id) {
     generateCardsinCart();
 }
 
-
-
-function emptyCart() {
-    cart = [];
-    localStorage.setItem("cart", JSON.stringify(cart));
-    generateCardsinCart();
-} 
-
 let totalPrice = () => {
     if (cart.length > 0) {
         let price = cart
@@ -119,6 +111,12 @@ let totalPrice = () => {
 };
 
 totalPrice();
+
+function emptyCart() {
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    generateCardsinCart();
+} 
 
 const emptyCartBtn = document.getElementById("emptyCart");
 emptyCartBtn.addEventListener ("click", () => {
