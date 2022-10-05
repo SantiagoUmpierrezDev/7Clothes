@@ -93,27 +93,57 @@ function removeItemFromCart(id) {
     generateCardsinCart();
 }
 
+
+
 function emptyCart() {
     cart = [];
     localStorage.setItem("cart", JSON.stringify(cart));
     generateCardsinCart();
-}
+} 
 
 let totalPrice = () => {
     if (cart.length > 0) {
-      let price = cart
+        let price = cart
         .map((i) => {
-          let { id, amount } = i;
-          let search = clothesData.find((x) => x.id === id) || [];
-          return amount * search.price;
+            let { id, amount } = i;
+            let search = clothesData.find((x) => x.id === id) || [];
+            return amount * search.price;
         })
         .reduce((i, x) => i + x, 0);
       cart__section.innerHTML = `
       <h1 class="cart__h1">Cart total : $ ${price}</h1>
       <button class="cart__button">Complete purchase</button>
-      <button onclick="emptyCart()" class="cart__button">Empty Cart</button>
+      <button id="emptyCart" class="cart__button">Empty Cart</button>
       `;
     } else return;
-  };
-  
-  totalPrice();
+};
+
+totalPrice();
+
+const emptyCartBtn = document.getElementById("emptyCart");
+emptyCartBtn.addEventListener ("click", () => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#4fbf2b',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        customClass: 'swal-size'
+      }).then((result) => {
+        if (result.isConfirmed) {
+        emptyCart();
+          Swal.fire({
+              title:'Your cart is empty',
+              text:'',
+              icon: 'success',
+              confirmButtonText: 'Ok',
+              confirmButtonColor:'#03045E',
+              customClass: 'swal-after'
+          }
+            
+          )
+        }
+      })
+})

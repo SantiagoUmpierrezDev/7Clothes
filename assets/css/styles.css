@@ -23,11 +23,6 @@ html {
     --secondTittles:'Lora', serif;
     --textFont:'Hind Madurai', sans-serif;
     /* Palette */
-    --white: #fcfcfc;
-    --red: #eb3456;
-    --pink: #ae5a87;
-    --blue: #7181b9;
-    --skyBlue: #34a8eb;
     --logoColor: #CAF0F8;
     --headerColor: #03045E;
 }
@@ -35,44 +30,55 @@ html {
 /* Navbar */
 
 .header {
-    background-color: var(--headerColor);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     height: 6rem;
     padding: 0 10rem;
     position: fixed; 
     top: 0; 
     width: 100%; 
+    background-color: var(--headerColor);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.nav__list {
+    list-style: none;
+    text-decoration: none;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
+    list-style: none;
     text-decoration: none;
     font-family: var(--logoFont);
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--logoColor);
 }
 
-.header__nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 6rem;
-    padding: 0 10rem;
-    gap: 3rem;
+.list__item{ 
+    text-decoration: none;
+    font-family: var(--logoFont);
+    font-size: 1.4rem;
+    color: var(--logoColor);
+    transition: 400ms;
 }
 
-.header__item{ 
-    list-style: none;
+.list__item:hover {
+    color: #0077B6;
 }
 
 .icon {
     font-size: 1.6rem;
     color: var(--logoColor);
+    transition: 400ms;
 }
+
+.icon:hover {
+    color: #0077B6;
+}
+
 
 /* Products Cards */
 
@@ -261,3 +267,18 @@ html {
 }
 
 /* FOOTER */
+
+/* SWEET ALERT */
+
+.swal-size {
+    font-family: var(--logoFont);
+    font-size: 1.3rem;
+    width: 39rem;
+    height: 25rem;
+}
+
+.swal-after {
+    font-family: var(--logoFont);
+    font-size: 1.2rem;
+
+}
