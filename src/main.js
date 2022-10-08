@@ -2,14 +2,14 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let store = document.getElementById("store");
 
 
-async function fetchProductos() {
+async function fetchItems() {
     const response = await fetch('src/products.json')
     return await response.json()
 }
 
 let items = []
 
-fetchProductos().then(products => {
+fetchItems().then(products => {
     items = products
     renderProducts()
 })
