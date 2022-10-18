@@ -55,10 +55,22 @@ let addToCart = (id) => {
             amount: 1
         })
     }
-
+    addedToCartNoti(`${search.name} added to cart`)
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-
-    
+function addedToCartNoti(prodName) {
+    Toastify({
+        text: prodName,
+        destination: '../pages/cart.html',
+        duration: 2500,
+        stopOnFocus: true,
+        className: "toast",
+        style: {
+            background: "#CAF0F8",
+            color: "#03045E"
+            
+          }
+    }).showToast()
+}
 

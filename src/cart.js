@@ -45,6 +45,7 @@ function renderCart() {
     let getAmount = (id) => {
         let selectedItem = id;
         let search = cart.find((i) => i.id === selectedItem);
+        if(search === undefined)return;
         document.getElementById(id).innerHTML = search.amount;
         totalPrice();
     };
@@ -122,7 +123,7 @@ let totalPrice = () => {
         price += item.price * item.amount
         cart__section.innerHTML = `
             <h1 class="cart__h1">Cart total: $ ${price}</h1>
-            <button class="cart__button">Complete purchase</button>
+            <a href="../pages/purchase.html"><button class="cart__button">Complete purchase</button></a>
             <button id="emptyCart" class="cart__button" onClick="emptyCartAlert ()">Empty Cart</button>
              `;                            
     }
