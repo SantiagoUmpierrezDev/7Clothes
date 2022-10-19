@@ -33,12 +33,49 @@
       </nav>
     </header>
     <main>
-      <section class="cart__section" id="cart__section"></section>
-
-      <section class="cart__items" id="cart__items"></section>
+      <h1 class="cart__h1">Fill out this form to complete your purchase</h1>
+      <article class="purchase__article">
+        <form class="article__form" action="">
+          <div class="form__div">
+            <input
+              class="div__input noborder"
+              type="text"
+              placeholder="name"
+              id="name"
+            />
+            <input
+              class="noborder"
+              type="text"
+              placeholder="last name"
+              id="lastName"
+            />
+          </div>
+          <div class="form__div">
+            <input
+              class="div__input noborder"
+              type="tel"
+              placeholder="telephone"
+              id="tel"
+            />
+            <input
+              class="noborder"
+              type="email"
+              placeholder="email address"
+              id="email"
+            />
+          </div>
+          <div class="form__div">
+            <input
+              class="div__submit"
+              type="button"
+              value="Complete purchase"
+              id="completePurchase"
+            />
+          </div>
+        </form>
+      </article>
     </main>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../src/products.json"></script>
-    <script src="../src/cart.js"></script>
+    <script src="../src/purchase.js"></script>
   </body>
 </html>
