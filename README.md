@@ -6,7 +6,10 @@ Project conducted for the JavaScript course at CoderHouse
 
 7 clothes is a digital clothing store.
 
-## Dependencies
+## Built with
+- HTML
+- CSS
+- JavaScript
 - Toastify
 - SweetAlert
 
